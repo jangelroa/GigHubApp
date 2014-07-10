@@ -1,0 +1,164 @@
+<!--
+
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GigHubApp</title>
+	<link rel="stylesheet" href="libraries/jquery-mobile/jquery.mobile-1.4.2.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script>
+  $(function() {
+    $( "#slider" ).slider();
+  });
+  </script>
+</head>
+<body>
+
+<!-- <div data-role="page">
+
+	<div data-role="header">
+	</div>
+
+	<div data-role="content">
+	</div>
+
+	<div data-role="footer">
+	</div>
+</div> -->
+
+<!-- Wine List Page -->
+<div data-role="page" id="wine-list">
+
+	<div data-role="header" style="overflow:hidden;">
+    <h1>GigHubApp</h1>
+    <a href="#" data-icon="gear" class="ui-btn-right">Options</a>
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div><!-- /navbar -->
+</div><!-- /header -->
+
+	<div data-role="content">
+		<div id="slider"></div>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#wine-list" data-icon="bullets">GigHubApp List</a></li>
+				<li><a href="#add-wine" data-icon="plus">Add  a GigHubApp Event</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /Wine List Page -->
+
+
+<!-- Add Wine Page -->
+<div data-role="page" id="add-wine">
+
+	<div data-role="header" data-theme="b">
+		<a data-role="button" data-icon="back" data-rel="back" data-theme="a">Back</a>
+		<h2>Add Wine</h2>
+	</div>
+
+	<div data-role="content">
+		<div class="bold">
+			Wine Name
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-name" type="text" placeholder="Name" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Country
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-country" type="text" placeholder="Country" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Region
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-region" type="text" placeholder="Region" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Grapes
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-grapes" type="text" placeholder="Grapes" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Year
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-year" type="text" placeholder="Year" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Price
+		</div>
+		<div class="margin-top-10">
+			<input id="new-wine-price" type="range" min="0" max="50" value="0" />
+		</div>
+
+		<div class="margin-top-10 bold">
+			Description
+		</div>
+		<div class="margin-top-10">
+			<textarea id="new-wine-description"></textarea>
+		</div>
+
+		<div class="margin-top-10 bold">
+			<a data-role="button" id="add-wine-button" data-theme="b">Add Wine</a>
+		</div>
+
+
+
+
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#wine-list" data-icon="bullets">Wine List</a></li>
+				<li><a href="#add-wine" data-icon="plus">Add Wine</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /Add Wine Page -->
+
+
+
+
+	<!-- handlebar template -->
+	<script type="text/x-template" id="wine-list-template">
+		  {{#wines}}
+			  <li>
+			  	<a>
+			  		<img src="{{ picture }}"/>
+			  		<h3>{{ name }}</h3>
+			  		<p>{{ description }}</p>
+			  	</a>
+			  </li>
+		  {{/wines}}
+	</script>
+
+  <script src="libraries/jquery/jquery.js"></script>
+  <script src="libraries/jquery-mobile/jquery.mobile-1.4.2.js"></script>
+  <script src="libraries/handlebars/handlebars-v1.3.0.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
