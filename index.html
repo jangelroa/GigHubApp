@@ -8,13 +8,7 @@
 	<title>GigHubApp</title>
 	<link rel="stylesheet" href="libraries/jquery-mobile/jquery.mobile-1.4.2.css">
 	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-	<script>
-  $(function() {
-    $( "#slider" ).slider();
-  });
-  </script>
+
 </head>
 <body>
 
@@ -46,14 +40,14 @@
 </div><!-- /header -->
 
 	<div data-role="content">
-		<div id="slider"></div>
+		
 	</div>
 
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#wine-list" data-icon="bullets">GigHubApp List</a></li>
-				<li><a href="#add-wine" data-icon="plus">Add  a GigHubApp Event</a></li>
+				<li><a href="#add-wine" data-icon="plus">Add a GigHubApp Event</a></li>
 			</ul>
 		</div>
 	</div>
@@ -66,40 +60,40 @@
 
 	<div data-role="header" data-theme="b">
 		<a data-role="button" data-icon="back" data-rel="back" data-theme="a">Back</a>
-		<h2>Add Wine</h2>
+		<h2>Add a GigHubApp Event</h2>
 	</div>
 
 	<div data-role="content">
 		<div class="bold">
-			Wine Name
+			Event Name
 		</div>
 		<div class="margin-top-10">
 			<input id="new-wine-name" type="text" placeholder="Name" />
 		</div>
 
 		<div class="margin-top-10 bold">
-			Country
+			Event Location
 		</div>
 		<div class="margin-top-10">
 			<input id="new-wine-country" type="text" placeholder="Country" />
 		</div>
 
 		<div class="margin-top-10 bold">
-			Region
+			Date
 		</div>
 		<div class="margin-top-10">
 			<input id="new-wine-region" type="text" placeholder="Region" />
 		</div>
 
 		<div class="margin-top-10 bold">
-			Grapes
+			Time
 		</div>
 		<div class="margin-top-10">
 			<input id="new-wine-grapes" type="text" placeholder="Grapes" />
 		</div>
 
 		<div class="margin-top-10 bold">
-			Year
+			Category
 		</div>
 		<div class="margin-top-10">
 			<input id="new-wine-year" type="text" placeholder="Year" />
@@ -120,7 +114,7 @@
 		</div>
 
 		<div class="margin-top-10 bold">
-			<a data-role="button" id="add-wine-button" data-theme="b">Add Wine</a>
+			<a data-role="button" id="add-wine-button" data-theme="b">Add Gig Event</a>
 		</div>
 
 
@@ -131,8 +125,8 @@
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#wine-list" data-icon="bullets">Wine List</a></li>
-				<li><a href="#add-wine" data-icon="plus">Add Wine</a></li>
+				<li><a href="#wine-list" data-icon="bullets">Event List</a></li>
+				<li><a href="#add-wine" data-icon="plus">Add Event</a></li>
 			</ul>
 		</div>
 	</div>
